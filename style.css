@@ -1,27 +1,44 @@
-.container{
-    background-color: burlywood;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
     display: flex;
+}
+.panel{
+    flex:1;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size:50px;
+    font-weight: bolder;
+    font-family: 'Amatic SC', cursive;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: 100px;
-    margin: 100px auto;
-    border: 2px solid black;
-    width: 50%;
-    padding: 20px 15px;
-}
-
-.in{
-    margin: 20px auto;
-    padding: 3px 50px;
-    width: 25%;
-    border-radius: 3px;
-}
-
-.btn{
-    padding: 5px 25px;
-    border-radius: 10px;
+    transition: all 0.7s;
     color: white;
-    background-color: teal;
-    font-size: 17px;
+}
+.panel>*{
+    transition: transform 0.5s;
+}
+.panel1{
+    background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500);
+}
+.panel2{
+    background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500);
+}
+.panel3{
+    background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500);
+}
+
+.panel>*:first-child{ transform: translateY(-500%);}
+.panel>*:last-child{ transform: translateY(500%);}
+.open-active>*:first-child{ transform: translateY(-100%);}
+.open-active>*:last-child{ transform: translateY(100%);}
+.open-active{
+    flex: 5;
+    font-size: 100px;
 }
